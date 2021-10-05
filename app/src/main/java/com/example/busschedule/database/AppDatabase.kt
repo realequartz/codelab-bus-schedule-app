@@ -24,6 +24,7 @@ abstract class AppDatabase : RoomDatabase() {
                     "app_database"
                 )
                     .createFromAsset("database/bus_schedule.db")
+                    .allowMainThreadQueries()
                     .build()
                 INSTANCE = instance
 
@@ -31,5 +32,4 @@ abstract class AppDatabase : RoomDatabase() {
             }
         }
     }
-
 }
